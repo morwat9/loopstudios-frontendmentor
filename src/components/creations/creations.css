@@ -1,0 +1,127 @@
+.creations-container {
+    width: 55em;
+    margin: 0 auto;
+}
+
+.creations-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.creations-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+}
+
+.creations-button-desktop {
+    font-family: 'Alata', sans-serif;
+    font-size: 1rem;
+    border: 2px solid black;
+    padding: .6em 2.5em;
+    letter-spacing: 4px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.creations-button-mobile {
+    font-family: 'Alata', sans-serif;
+    font-size: 1rem;
+    border: 2px solid black;
+    padding: .6em 2.5em;
+    letter-spacing: 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+}
+
+.creations-card-container {
+    margin: 6em 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2em;
+}
+
+.card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 21em;
+}
+
+.card-filter {
+    backdrop-filter: brightness(80%);
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+.card-title {
+    color: hsl(0, 0%, 100%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    padding: 1em;
+}
+
+@media screen and (max-width: 998px) {
+    .creations-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 6em 0;
+    }
+    
+    .creations-header {
+        justify-content: center;
+    }
+    
+    .creations-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        margin: 4em 0;
+        gap: 1em;
+    }
+
+    .card {
+        height: 20em;
+        width: 13em;
+    }
+
+    .creations-button-desktop {
+        display: none;
+    }
+
+    .creations-button-mobile {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .creations-card-container {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+
+    .card {
+        height: 10em;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-filter {
+        justify-content: flex-start;
+    }
+
+    .card-title {
+        width: 6em;
+        margin-top: auto;
+    }
+
+}
